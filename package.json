@@ -1,0 +1,18 @@
+{
+  "name": "BullTest",
+  "version": "1.0.0",
+  "description": "Test case for Bull issues reported by myself.",
+  "author": "Clark Endrizzi",
+  "private": true,
+  "scripts": {
+    "start-job": "node JobApp.js",
+    "start-job-2": "node JobApp.js",
+    "add-job": "node scripts/addJob.js",
+    "add-job-recurring": "node scripts/addJobRecurring.js"
+  },
+  "dependencies": {
+    "bull": "3.0.0-rc.8",
+    "ini": "^1.3.4"
+  },
+  "devDependencies": {}
+}
