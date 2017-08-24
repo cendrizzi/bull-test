@@ -12,6 +12,7 @@ In order to use this to reproduce the issues simple use the npm scripts.``
 The jobs app simply creates the bull handlers
 
 > npm run start-job
+
 > npm run start-job-2 (same thing essentially)
 
 ### Add recurring job
