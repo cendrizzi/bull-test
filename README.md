@@ -12,6 +12,7 @@ In order to use this to reproduce the issues simple use the npm scripts.``
 The jobs app simply creates the bull handlers
 
 > npm run start-job
+> npm run start-job-2 (same thing essentially)
 
 ### Add recurring job
 To add a recurring job simply run
@@ -30,20 +31,18 @@ Currently there are two issues I've created that this project was created to rep
 ### 666 - Duplicate recurring jobs
 Here are the instructions to duplicate this bug:
 
-1. Start web app
-2. Start jobs service
-3. Add recurring job
-4. While recurring job is being processed restart job service (you will know this by viewing the terminal logs)
-5. Wait for job to process again after restart
-6. View bull:error test:delayed to view duplicates
+1. Start jobs service
+2. Add recurring job
+3. While recurring job is being processed restart job service (you will know this by viewing the terminal logs)
+4. Wait for job to process again after restart
+5. View bull:error test:delayed to view duplicates
 
 ### 672 - Multi process bug
 Here are the instructions to duplicate this bug:
 
-1. Start web app
-2. Start jobs service
-3. Add recurring job
-4. While recurring job is being processed restart job service (you will know this by viewing the terminal logs)
-5. View bull:error test:delayed to view duplicates
+1. Start jobs service
+2. Add 10 jobs (or less...)
+3. Start both handlers 1 and 2
+5. Let it run the jobs, check the jobs after completion to see the error
 
 
